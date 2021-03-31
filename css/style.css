@@ -1,0 +1,140 @@
+:root{
+    --primary: #ff5100;
+    --dark: #171717;
+    --light: #f3f3f3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height: 100vh;
+    background: var(--light);
+    font-family: "Roboto", "Helvetica", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    width: 50px;
+    background: #2a9d8f;
+}
+
+main section {
+    display: block;
+    margin: 15px auto;
+    width:30px;
+    height: 30px;
+}
+
+main .color-field{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 10px auto;
+    border: 1px solid var(--light);
+    border-radius: 50%;
+    position: relative;
+}
+
+main .colors{
+    cursor: pointer;
+    background: var(--dark);
+    border: 1px solid var(--light);
+    position: relative;
+}
+
+main .colors .color-picker{
+    display: none;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+main .colors .color-picker:focus{
+    display: block;
+}
+
+main .colors:hover .color-picker{
+    display: block;
+}
+
+main .thickness{
+    position: relative;
+    background-color: var(--light);
+}
+
+main .thickness::after{
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    -webkit-transform: translateY(-50%, -50%);
+    transform: translateY(-50% -50%);
+    background: var(--dark); 
+
+}
+
+main .thickness-icon{
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+main .thickness .stroke-weight{
+    display: none;
+    position: absolute;
+    width: auto;
+    height: 25px;
+    left: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+main .thickness .stroke-weight:focus{
+    display: block;
+}
+
+main .thickness:hover .stroke-weight{
+    display: block;
+}
+
+main .buttons{
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 3 auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+main .icon{
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+main .save{
+    color: #07b607;
+    background-color: #dcf7cb;
+}
+
+main .undo{
+    color: #0761b6;
+    background-color: #d5cbf7;
+}
+
+
+main .clear{
+    color: #df1811;
+    background-color: #f8d7d5;
+}

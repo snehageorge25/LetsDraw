@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drawing board</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <main>
+        <div onClick=changeColor(this) class="color-field" style="background: red;"></div>
+        <div onClick=changeColor(this) class="color-field" style="background: blue;"></div>
+        <div onClick=changeColor(this) class="color-field" style="background: green;"></div>
+        <div onClick=changeColor(this) class="color-field" style="background: yellow;"></div>
+        <section class="colors">
+            <input onInput="draw_color = this.value" type="color" class="color-picker" value="#171717">
+        </section>
+        <section class="thickness">
+            <input type="number" class="stroke-weight" value="3" min="1" max="100">
+            <i class="material-icons thickness-icon">line_weight</i>
+        </section>
+        <section class="buttons save">
+            <a id="link"><i class="material-icons icon" onclick="saveImage()" style="color: #07b607;">save_alt</i></a>
+        </section>
+        <section onClick="undoLast()" class="buttons undo">
+            <i class="material-icons icon">undo</i>
+        </section>
+        <section onClick="claearCanvas()" class="buttons clear">
+            <i class="material-icons icon">delete</i>
+        </section>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>
